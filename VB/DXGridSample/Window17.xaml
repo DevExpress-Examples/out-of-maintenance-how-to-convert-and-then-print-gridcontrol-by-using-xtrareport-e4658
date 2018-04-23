@@ -1,0 +1,30 @@
+﻿<Window x:Class="DevExpressGrid_Flashing.Window17"        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+       	xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:local="clr-namespace:DevExpressGrid_Flashing" 
+        Title="Window17" Height="500" Width="904" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <dxg:GridControl x:Name="grid">
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="MyBoolUnb" UnboundType="Object" Name="gridColumn111"/>
+                <dxg:GridColumn FieldName="MyBool" AllowSorting="False"  Name="gridColumn1"/>
+                <dxg:GridColumn FieldName="Text" Name="gridColumn2"/>
+                <dxg:GridColumn FieldName="Number" SortMode="DisplayText" Name="gridColumn3"/>
+                <dxg:GridColumn FieldName="Group" Name="gridColumn4"/>
+                <dxg:GridColumn FieldName="MyDateTime" Name="gridColumn5" />
+                <dxg:GridColumn FieldName="MyTime" Name="gridColumn6" SortIndex="0" SortOrder="Ascending"/>
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView Name="tableView"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+        <Button Grid.Row="1" Content="Button" Name="button1" Click="button1_Click" />
+    </Grid>
+
+</Window>
