@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [ReportHelper.cs](./CS/DXGridSample/ReportHelper.cs) (VB: [ReportHelper.vb](./VB/DXGridSample/ReportHelper.vb))
+* [Window17.xaml](./CS/DXGridSample/Window17.xaml) (VB: [Window17.xaml](./VB/DXGridSample/Window17.xaml))
+* [Window17.xaml.cs](./CS/DXGridSample/Window17.xaml.cs) (VB: [Window17.xaml](./VB/DXGridSample/Window17.xaml))
+* [XtraReport1.cs](./CS/DXGridSample/XtraReport1.cs) (VB: [XtraReport1.vb](./VB/DXGridSample/XtraReport1.vb))
+<!-- default file list end -->
 # How to convert and then print GridControl by using XtraReport
 
 
