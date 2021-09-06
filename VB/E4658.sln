@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 14.00
-# Visual Studio 2015
+# Visual Studio 2012
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DXGridSample", "DXGridSample\DXGridSample.vbproj", "{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}"
 EndProject
 Global
