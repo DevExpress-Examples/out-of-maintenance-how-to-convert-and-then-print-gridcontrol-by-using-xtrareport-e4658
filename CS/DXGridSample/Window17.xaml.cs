@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows;
-using System.Collections.ObjectModel;
-using DevExpress.Xpf.Printing;
+﻿using DevExpress.Xpf.Printing;
 using DevExpress.XtraReports.UI;
+using System;
+using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace DevExpressGrid_Flashing {
     public partial class Window17 : Window {

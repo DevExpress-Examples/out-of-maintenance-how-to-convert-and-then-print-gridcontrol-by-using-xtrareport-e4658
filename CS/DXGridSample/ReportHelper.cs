@@ -1,11 +1,11 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.Collections.Generic;
-using DevExpress.Data;
+﻿using DevExpress.Data;
 using DevExpress.Xpf.Grid;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace ReportHelper {
 
@@ -74,7 +74,7 @@ namespace ReportHelper {
                 gb.Controls.Add(l);
                 gb.RepeatEveryPage = shouldRepeatGroupHeadersOnEveryPage;
                 GroupField gf = new GroupField(
-                    groupedColumn.FieldName, 
+                    groupedColumn.FieldName,
                     groupedColumn.SortOrder == ColumnSortOrder.Ascending ? XRColumnSortOrder.Ascending : XRColumnSortOrder.Descending);
                 gb.GroupFields.Add(gf);
                 report.Bands.Add(gb);
@@ -86,7 +86,7 @@ namespace ReportHelper {
                 if (!((TableView)grid.View).GroupedColumns.Contains(columns[i]))
                     if (columns[i].SortOrder != ColumnSortOrder.None)
                         ((DetailBand)report.Bands[BandKind.Detail]).SortFields.Add(
-                            new GroupField(columns[i].FieldName, 
+                            new GroupField(columns[i].FieldName,
                             columns[i].SortOrder == ColumnSortOrder.Ascending ? XRColumnSortOrder.Ascending : XRColumnSortOrder.Descending));
         }
         void InitFilters(GridControl grid) {
@@ -95,7 +95,7 @@ namespace ReportHelper {
         void InitDetailsAndPageHeader(GridControl grid) {
             IList<GridColumn> groupedColumns = ((TableView)grid.View).GroupedColumns;
 
-            int pagewidth = (report.PageWidth - (report.Margins.Left + report.Margins.Right)) - groupedColumns.Count * subGroupOffset;
+            int pagewidth = (int)(report.PageWidth - (report.Margins.Left + report.Margins.Right)) - groupedColumns.Count * subGroupOffset;
             List<ColumnInfo> columns = GetColumnsInfo(grid, pagewidth);
             if (CustomizeColumnsCollection != null)
                 CustomizeColumnsCollection(report, new ColumnsCreationEventArgs(pagewidth) { ColumnsInfo = columns });
@@ -149,7 +149,8 @@ namespace ReportHelper {
                     ColumnCaption = string.IsNullOrEmpty(dataColumn.HeaderCaption.ToString()) ? dataColumn.FieldName : dataColumn.HeaderCaption.ToString(),
                     ColumnWidth = (pagewidth / visibleColumns.Count),
                     FieldName = dataColumn.FieldName,
-                    IsVisible = true };
+                    IsVisible = true
+                };
                 columns.Add(column);
             }
             return columns;
@@ -174,13 +175,13 @@ namespace ReportHelper {
         }
     }
 
-    public class ControlCustomizationEventArgs : EventArgs {        
+    public class ControlCustomizationEventArgs : EventArgs {
         public XRControl Owner { get; set; }
-        public bool IsModified { get; set; }        
+        public bool IsModified { get; set; }
         public string FieldName { get; set; }
     }
 
-    public class ColumnsCreationEventArgs : EventArgs {                
+    public class ColumnsCreationEventArgs : EventArgs {
         public ColumnsCreationEventArgs(int pageWidth) {
             this.PageWidth = pageWidth;
         }
@@ -195,7 +196,7 @@ namespace ReportHelper {
         GridColumn gridViewColumn;
         public GridColumn GridViewColumn {
             get { return gridViewColumn; }
-        }               
+        }
         public string ColumnCaption { get; set; }
         public string FieldName { get; set; }
         public int ColumnWidth { get; set; }

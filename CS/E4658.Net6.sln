@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DXGridSample.Net6", "DXGridSample\DXGridSample.Net6.csproj", "{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Debug|x86.ActiveCfg = Debug|x86
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Debug|x86.Build.0 = Debug|x86
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Release|x86.ActiveCfg = Release|x86
+		{ADBAC0DA-9012-4277-A791-E4AE9545A5C2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04EE69AC-84BB-4F5E-98B0-3F467CE288AF}
+	EndGlobalSection
+EndGlobal
