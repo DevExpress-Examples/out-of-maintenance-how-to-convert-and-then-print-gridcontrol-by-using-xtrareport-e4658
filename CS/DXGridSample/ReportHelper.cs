@@ -1,4 +1,5 @@
 ﻿using DevExpress.Data;
+using DevExpress.Drawing.Printing;
 using DevExpress.Xpf.Grid;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
@@ -27,7 +28,7 @@ namespace ReportHelper {
         public XtraReport GenerateReport(GridControl grid, object aspDataSource) {
             report = new XtraReport();
             report.Landscape = true;
-            report.PaperKind = System.Drawing.Printing.PaperKind.Letter;
+            report.PaperKind = DXPaperKind.Letter;
 
             InitDataSource(aspDataSource);
             InitDetailsAndPageHeader(grid);
